@@ -1,4 +1,3 @@
 #!/bin/bash
 
-cd ./vendor/bin
-./sail up
+composer install && cd ./vendor/bin && ./sail up
