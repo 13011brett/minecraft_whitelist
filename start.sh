@@ -1,3 +1,8 @@
 #!/bin/bash
 
-composer install && cd ./vendor/bin && ./sail up
+sudo docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs && cd ./vendor/bin && ./sail up
