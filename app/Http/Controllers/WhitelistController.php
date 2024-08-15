@@ -77,7 +77,7 @@ class WhitelistController extends Controller
 
         return Inertia::render('Whitelists/Edit', [
             'whitelist' => $whitelist,
-        ] );
+        ])->with('success', "User was removed from the whitelist.");
 
     }
 
@@ -86,6 +86,10 @@ class WhitelistController extends Controller
      */
     public function destroy(Whitelist $whitelist)
     {
-        //
+        $name = $whitelist->friendly_name;
+        $whitelist->delete();
+        return to_route('whitelists.index')
+            ->with('success', "Whitelist  \"$name\" was removed..");
+
     }
 }
