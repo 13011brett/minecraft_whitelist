@@ -13,7 +13,7 @@ class WhitelistController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request $request) : Response
     {
 
         $whitelists = Whitelist::all()->where('user_id', '=', $request->user()->id);
@@ -62,6 +62,22 @@ class WhitelistController extends Controller
      */
     public function update(Request $request, Whitelist $whitelist) : void
     {
+
+    }
+    public function removeUser(Request $request, Whitelist $whitelist)
+    {
+        $uuid = isset($request['uuid']) ? $request['uuid'] : '';
+
+        $collection = json_encode(array_values(collect(json_decode($whitelist->users, true))
+            ->filter(function($value, $key) use ($uuid) { return $value['uuid'] != $uuid;    })
+            ->toArray()));
+        $whitelist->users = $collection;
+        $whitelist->save();
+
+
+        return Inertia::render('Whitelists/Edit', [
+            'whitelist' => $whitelist,
+        ] );
 
     }
 
