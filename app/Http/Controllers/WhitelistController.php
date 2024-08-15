@@ -14,6 +14,7 @@ class WhitelistController extends Controller
     public function index()
     {
 
+
         return Inertia::render('Whitelist/WhitelistIndex', [
             'whitelists' => Whitelist::all()
         ]);

@@ -4,14 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Whitelist extends Model
 {
     use HasFactory;
 
-    public function users()
+    public function user(): BelongsTo
     {
-        $this->hasMany(WhitelistUser::class);
+        return $this->belongsTo(User::class);
     }
 }
 
