@@ -52,7 +52,7 @@ services:
             - meilisearch
             - mailpit
             - selenium
-        command: bash -c "sleep 20 && php artisan migrate && php artisan serve --host 0.0.0.0 --port=80"
+        command: bash -c "sleep 20 && npm install && php artisan migrate && php artisan serve --host 0.0.0.0 --port=80"
     redis:
         image: 'redis:alpine'
         ports:
