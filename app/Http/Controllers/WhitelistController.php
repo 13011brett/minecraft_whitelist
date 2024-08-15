@@ -3,20 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Whitelist;
+
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class WhitelistController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
 
+        $whitelists = Whitelist::all()->where('user_id', '=', $request->user()->id);
 
-        return Inertia::render('Whitelist/WhitelistIndex', [
-            'whitelists' => Whitelist::all()
+        return Inertia::render('Whitelists/All', [
+            'whitelists' => $whitelists,
         ]);
     }
 
@@ -47,17 +50,19 @@ class WhitelistController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Whitelist $whitelist)
+    public function edit(Request $request, Whitelist $whitelist)
     {
-        //
+        return Inertia::render('Whitelists/Edit', [
+            'whitelist' => $whitelist,
+        ] );
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Whitelist $whitelist)
+    public function update(Request $request, Whitelist $whitelist) : void
     {
-        //
+
     }
 
     /**

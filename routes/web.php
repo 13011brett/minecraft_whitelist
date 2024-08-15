@@ -20,7 +20,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('whitelists', [WhitelistController::class, 'index'])->name('whitelists.index');
+    Route::get('/whitelists', [WhitelistController::class, 'index'])->name('whitelists.index');
+    Route::get('/whitelists/{whitelist}', [WhitelistController::class, 'edit'])->name('whitelists.edit');
+    Route::patch('/whitelists/{whitelist}', [WhitelistController::class, 'update'])->name('whitelists.update');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

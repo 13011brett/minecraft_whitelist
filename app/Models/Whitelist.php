@@ -10,10 +10,25 @@ class Whitelist extends Model
 {
     use HasFactory;
 
+
+    protected $hidden = [
+        'user',
+    ];
+
+    protected $appends = [
+        'usersname',
+    ];
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getUsersnameAttribute(): string
+    {
+        return $this->user->name;
+    }
+
+
 }
 
 

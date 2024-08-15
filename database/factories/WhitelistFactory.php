@@ -23,6 +23,7 @@ class WhitelistFactory extends Factory
         // would want more protections if this app was going to more than this.
         return [
             'users' => json_encode(WhitelistUser::factory(5)->make()),
+            'friendly_name' => fake()->domainName(),
             'user_id' => \App\Models\User::inRandomOrder()->first()->id,
         ];
     }
