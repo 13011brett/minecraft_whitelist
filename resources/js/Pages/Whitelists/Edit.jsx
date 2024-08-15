@@ -10,14 +10,6 @@ const columns = [
 
 export default function Edit({ auth, whitelist }){
 
-    const removeUser = (ev) => {
-        if(!window.confirm("Are you sure you want to delete this user?")){
-            return;
-        }
-
-        //router.patch(route('whitelist.removeUser', whitelist));
-    }
-
 const users = JSON.parse(whitelist.users);
     return(
         <AuthenticatedLayout
