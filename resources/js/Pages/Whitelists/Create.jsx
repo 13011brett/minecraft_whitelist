@@ -74,6 +74,7 @@ export default function Create({ auth }) {
                                     value={data.friendly_name}
                                     className="mt-1 block w-full"
                                     isFocused={true}
+                                    placeholder="My Favorite Server!"
                                     onChange={(e) => setData("friendly_name", e.target.value)}
                                 />
 

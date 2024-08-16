@@ -11,10 +11,10 @@ export default function TableRemove({ items, columns, primary, action, removeFro
         _method: "PATCH",
     })
     const handleSubmit = (e) => {
-        console.log(e);
         e.preventDefault();
+
         post(route(action, removeFrom.id));
-        //router.patch(route(action, removeFrom.id));
+
     }
 
     return (

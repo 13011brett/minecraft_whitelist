@@ -14,6 +14,11 @@ class Whitelist extends Model
     protected $hidden = [
         'user',
     ];
+    protected $fillable = [
+        'users',
+        'friendly_name',
+        'user_id',
+    ];
 
     protected $appends = [
         'usersname',

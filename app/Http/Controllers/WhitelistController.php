@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreWhitelistRequest;
 use App\Models\Whitelist;
+use App\Services\WhitelistService;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -14,20 +15,21 @@ class WhitelistController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request) : Response
+    public function index(Request $request)
     {
 
-        $whitelists = Whitelist::all()->where('user_id', '=', $request->user()->id);
+        $whitelists = Whitelist::all()->where('user_id', '=', $request->user()->id)->toArray();
+
 
         return Inertia::render('Whitelists/All', [
-            'whitelists' => $whitelists,
+            'whitelists' => array_values($whitelists),
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): Response
     {
         return Inertia::render("Whitelists/Create");
         //
@@ -36,9 +38,41 @@ class WhitelistController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreWhitelistRequest $request)
+    public function store(StoreWhitelistRequest $request, WhitelistService $whitelistService)
     {
-        return $request;
+        $data = $request->validated();
+        // Will remove all spaces in general since no Minecraft username can have that.
+        $users = [];
+        if(json_validate($request->whitelist_upload)) {
+            $uploadFileArray = json_decode($request->whitelist_upload, true);
+            foreach ($uploadFileArray as $user) {
+                if(array_key_exists('name', $user)){
+                    $users[] = $user['name'];
+                }
+
+            }
+
+        }
+        //This can be cleaned up by splitting it apart to make it more readable.
+        $usersArray = array_unique(array_merge(explode(',', str_replace(' ', '', $request->users)), $users));
+
+
+
+        foreach($usersArray as $user){
+            if(strlen($user) > 16 || $user == ''){
+                unset($usersArray[array_search($user, $usersArray)]);
+            }
+
+        }
+
+
+        $whitelistValidated = $whitelistService->getUsersFromMojang(array_values($usersArray));
+
+        $data['users'] = $whitelistValidated;
+        $data['user_id'] = $request->user()->id;
+
+        Whitelist::create($data);
+        return to_route('whitelists.index')->with('success', 'Whitelist created.');
         //
     }
 
@@ -80,7 +114,8 @@ class WhitelistController extends Controller
 
         return Inertia::render('Whitelists/Edit', [
             'whitelist' => $whitelist,
-        ])->with('success', "User was removed from the whitelist.");
+            'success' => session('success'),
+        ]);
 
     }
 
