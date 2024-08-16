@@ -1,5 +1,5 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.jsx";
-import {Head, router, useForm} from "@inertiajs/react";
+import {Head, Link, router, useForm} from "@inertiajs/react";
 import TableRemove from "@/Components/TableRemove.jsx";
 
 const columns = [
@@ -18,6 +18,7 @@ const users = JSON.parse(whitelist.users);
                 className="font-semibold text-2xl text-gray-800 leading-tight text-center">Whitelist
                 - {whitelist.friendly_name ?? whitelist.id}</h2>}
         >
+
             <Head title={'Whitelist:' + whitelist.friendly_name}/>
 
 
@@ -26,7 +27,7 @@ const users = JSON.parse(whitelist.users);
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <TableRemove items={users} columns={columns} primary="#" action="whitelists.removeUser"
-                                     removeFrom={whitelist}/>
+                                     actionParentId={whitelist}  actionEdit="whitelist.showAddUsers" actionDownload="whitelist.download"/>
                     </div>
                 </div>
             </div>

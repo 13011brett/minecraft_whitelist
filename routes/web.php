@@ -26,10 +26,12 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/whitelists', [WhitelistController::class, 'index'])->name('whitelists.index');
-    Route::get('/whitelists/{whitelist}', [WhitelistController::class, 'edit'])->name('whitelists.edit');
-    Route::get('/whitelist/create', [WhitelistController::class, 'create'])->name('whitelists.create');
+    Route::get('/whitelist/{whitelist}', [WhitelistController::class, 'edit'])->name('whitelist.edit');
+    Route::get('/whitelist/{whitelist}/edit', [WhitelistController::class, 'showAddUsers'])->name('whitelist.showAddUsers');
+    Route::get('/whitelists/create', [WhitelistController::class, 'create'])->name('whitelists.create');
+    Route::get('/whitelist/{whitelist}/download', [WhitelistController::class, 'download'])->name('whitelist.download');
 
-    Route::patch('/whitelists/{whitelist}', [WhitelistController::class, 'update'])->name('whitelists.update');
+    Route::put('/whitelist/{whitelist}', [WhitelistController::class, 'update'])->name('whitelist.update');
     Route::patch('/whitelists/{whitelist}', [WhitelistController::class, 'removeUser'])->name('whitelists.removeUser');
 
     Route::post('/whitelist/create', [WhitelistController::class, 'store'])->name('whitelists.store');
@@ -42,5 +44,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('whitelist', WhitelistController::class);
+//Route::resource('whitelist', WhitelistController::class);
 require __DIR__.'/auth.php';

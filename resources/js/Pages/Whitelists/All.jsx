@@ -18,7 +18,7 @@ export default function All({ auth, whitelists, success }) {
                         Whitelists
                     </h2>
                     <Link
-                        href={route("whitelist.create")}
+                        href={route("whitelists.create")}
                         className="bg-emerald-500 py-1 px-3 text-white rounded shadow transition-all hover:bg-emerald-600"
                     >
                         Add new
@@ -31,7 +31,7 @@ export default function All({ auth, whitelists, success }) {
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <Table items={whitelists} columns={columns} primary="#" action="whitelists.edit" actionRemove="whitelists.destroy"></Table>
+                        <Table items={whitelists} columns={columns} primary="#" action="whitelist.edit" actionRemove="whitelists.destroy" actionDownload="whitelist.download"></Table>
                     </div>
                 </div>
             </div>

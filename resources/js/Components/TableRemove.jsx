@@ -1,6 +1,6 @@
 import {Link, router, useForm} from "@inertiajs/react";
 
-export default function TableRemove({ items, columns, primary, action, removeFrom }) {
+export default function TableRemove({ items, columns, primary, action, actionParentId, actionEdit, actionDownload }) {
 
     function setValuesForUser(user){
         setData("uuid", user.uuid);
@@ -13,7 +13,7 @@ export default function TableRemove({ items, columns, primary, action, removeFro
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        post(route(action, removeFrom.id));
+        post(route(action, actionParentId.id));
 
     }
 
@@ -27,7 +27,21 @@ export default function TableRemove({ items, columns, primary, action, removeFro
                     {columns.map((column) =>
                         <th key={column} scope="col" className="px-6 py-3">{column}</th>
                     )}
-                    <th scope="col" className="px-6 py-3"></th>
+                    <th scope="col" className="px-6 py-3">Actions</th>
+                    <th colSpan="1" className="px-6 py-3">
+                        <Link
+                            href={route(actionEdit, actionParentId)}
+                            className="bg-emerald-500 py-2 px-3 text-white rounded shadow transition-all hover:bg-emerald-600"
+                        >
+                            Add Users / Edit
+                        </Link>
+                        <Link
+                            href={route(actionDownload, actionParentId)}
+                            className="bg-indigo-50py-2 px-3 text-white rounded shadow transition-all hover:bg-indigo-600"
+                        >
+                            Download Whitelist
+                        </Link>
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -47,6 +61,9 @@ export default function TableRemove({ items, columns, primary, action, removeFro
                                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                 Remove
                             </button>
+                        </td>
+                        <td>
+
                         </td>
                     </tr>
                 )}
