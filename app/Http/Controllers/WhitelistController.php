@@ -7,6 +7,7 @@ use App\Models\Whitelist;
 use App\Services\WhitelistService;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -40,6 +41,9 @@ class WhitelistController extends Controller
      */
     public function store(StoreWhitelistRequest $request, WhitelistService $whitelistService)
     {
+        if(Auth::id() !== $request->user()->id){
+            abort(403);
+        }
         $data = $request->validated();
         // Will remove all spaces in general since no Minecraft username can have that.
         $users = [];
@@ -89,6 +93,9 @@ class WhitelistController extends Controller
      */
     public function edit(Request $request, Whitelist $whitelist)
     {
+        if (Auth::id() != $whitelist->user_id){
+            abort(403);
+        }
         return Inertia::render('Whitelists/Edit', [
             'whitelist' => $whitelist,
         ] );
@@ -103,6 +110,9 @@ class WhitelistController extends Controller
     }
     public function removeUser(Request $request, Whitelist $whitelist)
     {
+        if (Auth::id() != $whitelist->user_id){
+            abort(403);
+        }
         $uuid = isset($request['uuid']) ? $request['uuid'] : '';
 
         $collection = json_encode(array_values(collect(json_decode($whitelist->users, true))
