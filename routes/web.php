@@ -32,6 +32,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/whitelists/{whitelist}', [WhitelistController::class, 'update'])->name('whitelists.update');
     Route::patch('/whitelists/{whitelist}', [WhitelistController::class, 'removeUser'])->name('whitelists.removeUser');
 
+    Route::post('/whitelist/create', [WhitelistController::class, 'store'])->name('whitelists.store');
+
+
     Route::delete('/whitelists/{whitelist}', [WhitelistController::class, 'destroy'])->name('whitelists.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

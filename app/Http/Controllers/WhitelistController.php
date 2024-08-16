@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWhitelistRequest;
 use App\Models\Whitelist;
 
 use Illuminate\Http\Request;
@@ -35,8 +36,9 @@ class WhitelistController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreWhitelistRequest $request)
     {
+        return $request;
         //
     }
 

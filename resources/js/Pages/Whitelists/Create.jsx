@@ -1,10 +1,9 @@
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
-import SelectInput from "@/Components/SelectInput";
-import TextAreaInput from "@/Components/TextAreaInput";
 import TextInput from "@/Components/TextInput";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
+import InputTag from "@/Components/InputTag.jsx";
 
 export default function Create({ auth }) {
     const { data, setData, post, errors, reset } = useForm({
@@ -12,6 +11,7 @@ export default function Create({ auth }) {
         friendly_name: "",
         users: "",
     });
+
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -54,7 +54,7 @@ export default function Create({ auth }) {
                                     className="mt-1 block w-full"
                                     onChange={(e) => {
                                         fileReader.readAsText(e.target.files[0]);
-                                        fileReader.onload = function(event) {
+                                        fileReader.onload = function (event) {
                                             fileContents = event.target.result;
                                             setData("whitelist_upload", fileContents);
 
@@ -62,10 +62,10 @@ export default function Create({ auth }) {
                                     }}
 
                                 />
-                                <InputError message={errors.whitelist_upload} className="mt-2" />
+                                <InputError message={errors.whitelist_upload} className="mt-2"/>
                             </div>
                             <div className="mt-4">
-                                <InputLabel htmlFor="friendly_name" value="Friendly Name" />
+                                <InputLabel htmlFor="friendly_name" value="Friendly Name"/>
 
                                 <TextInput
                                     id="friendly_name"
@@ -77,8 +77,31 @@ export default function Create({ auth }) {
                                     onChange={(e) => setData("friendly_name", e.target.value)}
                                 />
 
-                                <InputError message={errors.friendly_name} className="mt-2" />
+                                <InputError message={errors.friendly_name} className="mt-2"/>
+
+
                             </div>
+
+                            <div className="mt-4">
+                                <InputLabel htmlFor="users" value="Users (Comma Separated)"/>
+
+                                <TextInput
+                                    id="users"
+                                    type="text"
+                                    name="users"
+                                    value={data.users}
+                                    className="mt-1 block w-full"
+                                    isFocused={false}
+                                    placeholder="gamer101, apex_rocks13011, brettames11"
+                                    onChange={(e) => setData("users", e.target.value)}
+                                />
+
+                                <InputError message={errors.users} className="mt-2"/>
+
+
+                            </div>
+
+
 
                             <div className="mt-4 text-right">
                                 <Link
@@ -87,7 +110,8 @@ export default function Create({ auth }) {
                                 >
                                     Cancel
                                 </Link>
-                                <button className="bg-emerald-500 py-1 px-3 text-white rounded shadow transition-all hover:bg-emerald-600">
+                                <button
+                                    className="bg-emerald-500 py-1 px-3 text-white rounded shadow transition-all hover:bg-emerald-600">
                                     Submit
                                 </button>
                             </div>

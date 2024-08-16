@@ -24,7 +24,7 @@ class StoreWhitelistRequest extends FormRequest
     {
         return [
             "friendly_name" => ['required', 'max:50'],
-            'users' => ['nullable', 'string'],
+            'users' => ['nullable', 'stringgit'],
             "whitelist_upload" => ['nullable', 'string'],
         ];
     }
