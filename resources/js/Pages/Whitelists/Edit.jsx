@@ -15,7 +15,7 @@ const users = JSON.parse(whitelist.users);
         <AuthenticatedLayout
             user={auth.user}
             header={<h2
-                className="font-semibold text-2xl text-gray-800 leading-tight text-center">Whitelist
+                className="font-semibold text-2xl text-gray-800 dark:text-gray-200 leading-tight text-center">Whitelist
                 - {whitelist.friendly_name ?? whitelist.id}</h2>}
         >
 

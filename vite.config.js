@@ -10,4 +10,8 @@ export default defineConfig({
         }),
         react(),
     ],
+    server: {
+        host: 'laravel.test', // node container in docker
+        origin: 'http://localhost:5173', // exposed node container address
+    },
 });

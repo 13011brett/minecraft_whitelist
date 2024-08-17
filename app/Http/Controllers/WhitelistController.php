@@ -128,9 +128,8 @@ class WhitelistController extends Controller
         return to_route('whitelist.edit', $whitelist)->with('success', 'Whitelist updated.');
 
     }
-    public function download(Request $request, Whitelist $whitelist){
-
-        if(Auth::id() !== $request->user()->id){
+    public function download(Whitelist $whitelist){
+        if(Auth::id() !== $whitelist->user_id){
             abort(403);
         }
 

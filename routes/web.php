@@ -1,23 +1,9 @@
 <?php
 
-use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WhitelistController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
-
-// Commented out as we're just going to direct to register immediately for purposes of the demo.
-
-//Route::get('/', function () {
-//    return Inertia::render('Welcome', [
-//        'canLogin' => Route::has('login'),
-//        'canRegister' => Route::has('register'),
-//        'laravelVersion' => Application::VERSION,
-//        'phpVersion' => PHP_VERSION,
-//    ]);
-//});
 
 
 Route::get('/dashboard', function () {
@@ -35,8 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/whitelists/{whitelist}', [WhitelistController::class, 'removeUser'])->name('whitelists.removeUser');
 
     Route::post('/whitelist/create', [WhitelistController::class, 'store'])->name('whitelists.store');
-
-
     Route::delete('/whitelists/{whitelist}', [WhitelistController::class, 'destroy'])->name('whitelists.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -44,5 +28,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//Route::resource('whitelist', WhitelistController::class);
 require __DIR__.'/auth.php';

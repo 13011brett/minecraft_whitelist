@@ -1,216 +1,333 @@
 {
-  "_ApplicationLogo-XlMqhAvJ.js": {
-    "file": "assets/ApplicationLogo-XlMqhAvJ.js",
+  "_ApplicationLogo-D-kku-4I.js": {
+    "file": "assets/ApplicationLogo-D-kku-4I.js",
     "name": "ApplicationLogo",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_AuthenticatedLayout-BBKeLpUu.js": {
-    "file": "assets/AuthenticatedLayout-BBKeLpUu.js",
+  "_AuthenticatedLayout-DOwyOX3F.js": {
+    "file": "assets/AuthenticatedLayout-DOwyOX3F.js",
     "name": "AuthenticatedLayout",
     "imports": [
       "resources/js/app.jsx",
-      "_ApplicationLogo-XlMqhAvJ.js",
-      "_transition-ERSG0wV3.js"
+      "_ApplicationLogo-D-kku-4I.js",
+      "_transition-kWffz3ZB.js"
     ]
   },
-  "_GuestLayout-DBy9C0zG.js": {
-    "file": "assets/GuestLayout-DBy9C0zG.js",
+  "_GuestLayout-DZwydIzO.js": {
+    "file": "assets/GuestLayout-DZwydIzO.js",
     "name": "GuestLayout",
     "imports": [
       "resources/js/app.jsx",
-      "_ApplicationLogo-XlMqhAvJ.js"
+      "_ApplicationLogo-D-kku-4I.js"
     ]
   },
-  "_InputLabel-CYikAhnL.js": {
-    "file": "assets/InputLabel-CYikAhnL.js",
+  "_InputLabel-BUJULuQT.js": {
+    "file": "assets/InputLabel-BUJULuQT.js",
     "name": "InputLabel",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_PrimaryButton-CHa1EHKf.js": {
-    "file": "assets/PrimaryButton-CHa1EHKf.js",
+  "_PrimaryButton-B5OxZYE9.js": {
+    "file": "assets/PrimaryButton-B5OxZYE9.js",
     "name": "PrimaryButton",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_TextInput-Bl5Qgpyl.js": {
-    "file": "assets/TextInput-Bl5Qgpyl.js",
+  "_TextInput-CXG85_ua.js": {
+    "file": "assets/TextInput-CXG85_ua.js",
     "name": "TextInput",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_transition-ERSG0wV3.js": {
-    "file": "assets/transition-ERSG0wV3.js",
+  "_transition-kWffz3ZB.js": {
+    "file": "assets/transition-kWffz3ZB.js",
     "name": "transition",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
+  "resources/css/app.css": {
+    "file": "assets/app-dF8q25zu.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
   "resources/js/Pages/Auth/ConfirmPassword.jsx": {
-    "file": "assets/ConfirmPassword-CBuL1r71.js",
+    "file": "assets/ConfirmPassword-L2V_eAK-.js",
     "name": "ConfirmPassword",
     "src": "resources/js/Pages/Auth/ConfirmPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DBy9C0zG.js",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_ApplicationLogo-XlMqhAvJ.js"
+      "_GuestLayout-DZwydIzO.js",
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_ApplicationLogo-D-kku-4I.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Auth/ForgotPassword.jsx": {
-    "file": "assets/ForgotPassword-DtWO4Eyf.js",
+    "file": "assets/ForgotPassword-DVCAM0De.js",
     "name": "ForgotPassword",
     "src": "resources/js/Pages/Auth/ForgotPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DBy9C0zG.js",
-      "_TextInput-Bl5Qgpyl.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_ApplicationLogo-XlMqhAvJ.js"
+      "_GuestLayout-DZwydIzO.js",
+      "_TextInput-CXG85_ua.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_ApplicationLogo-D-kku-4I.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-1P1Svfwk.js",
+    "file": "assets/Login-B2kEvB4L.js",
     "name": "Login",
     "src": "resources/js/Pages/Auth/Login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DBy9C0zG.js",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_ApplicationLogo-XlMqhAvJ.js"
+      "_GuestLayout-DZwydIzO.js",
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_ApplicationLogo-D-kku-4I.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register-DVjr63yG.js",
+    "file": "assets/Register-G_otS_Bd.js",
     "name": "Register",
     "src": "resources/js/Pages/Auth/Register.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DBy9C0zG.js",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_ApplicationLogo-XlMqhAvJ.js"
+      "_GuestLayout-DZwydIzO.js",
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_ApplicationLogo-D-kku-4I.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Auth/ResetPassword.jsx": {
-    "file": "assets/ResetPassword-3QTUgf_j.js",
+    "file": "assets/ResetPassword-DmJs6LE1.js",
     "name": "ResetPassword",
     "src": "resources/js/Pages/Auth/ResetPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DBy9C0zG.js",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_ApplicationLogo-XlMqhAvJ.js"
+      "_GuestLayout-DZwydIzO.js",
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_ApplicationLogo-D-kku-4I.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Auth/VerifyEmail.jsx": {
-    "file": "assets/VerifyEmail-DGi9QYjh.js",
+    "file": "assets/VerifyEmail-CuA0U92u.js",
     "name": "VerifyEmail",
     "src": "resources/js/Pages/Auth/VerifyEmail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DBy9C0zG.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_ApplicationLogo-XlMqhAvJ.js"
+      "_GuestLayout-DZwydIzO.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_ApplicationLogo-D-kku-4I.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard-mHpc5QCx.js",
+    "file": "assets/Dashboard-BY21uxkA.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BBKeLpUu.js",
-      "_ApplicationLogo-XlMqhAvJ.js",
-      "_transition-ERSG0wV3.js"
+      "_AuthenticatedLayout-DOwyOX3F.js",
+      "_ApplicationLogo-D-kku-4I.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
+    ]
+  },
+  "resources/js/Pages/Error.jsx": {
+    "file": "assets/Error-Df3I4EYH.js",
+    "name": "Error",
+    "src": "resources/js/Pages/Error.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Profile/Edit.jsx": {
-    "file": "assets/Edit-6KbYqpL-.js",
+    "file": "assets/Edit-uOKhHVR9.js",
     "name": "Edit",
     "src": "resources/js/Pages/Profile/Edit.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BBKeLpUu.js",
+      "_AuthenticatedLayout-DOwyOX3F.js",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
-      "_ApplicationLogo-XlMqhAvJ.js",
-      "_transition-ERSG0wV3.js",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_PrimaryButton-CHa1EHKf.js"
+      "_ApplicationLogo-D-kku-4I.js",
+      "_transition-kWffz3ZB.js",
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_PrimaryButton-B5OxZYE9.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx": {
-    "file": "assets/DeleteUserForm-CMKoAURQ.js",
+    "file": "assets/DeleteUserForm-Db9QqbAl.js",
     "name": "DeleteUserForm",
     "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_transition-ERSG0wV3.js"
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx": {
-    "file": "assets/UpdatePasswordForm-DaBVIIJW.js",
+    "file": "assets/UpdatePasswordForm-CJe7p5-9.js",
     "name": "UpdatePasswordForm",
     "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_transition-ERSG0wV3.js"
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx": {
-    "file": "assets/UpdateProfileInformationForm-qu2AMRfx.js",
+    "file": "assets/UpdateProfileInformationForm-I1CoyDnF.js",
     "name": "UpdateProfileInformationForm",
     "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-Bl5Qgpyl.js",
-      "_InputLabel-CYikAhnL.js",
-      "_PrimaryButton-CHa1EHKf.js",
-      "_transition-ERSG0wV3.js"
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_PrimaryButton-B5OxZYE9.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-D7l1TZh9.js",
+    "file": "assets/Welcome-C6qL1Unt.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
+    ]
+  },
+  "resources/js/Pages/Whitelists/AddUsers.jsx": {
+    "file": "assets/AddUsers-B93xR7n8.js",
+    "name": "AddUsers",
+    "src": "resources/js/Pages/Whitelists/AddUsers.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_AuthenticatedLayout-DOwyOX3F.js",
+      "_ApplicationLogo-D-kku-4I.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
+    ]
+  },
+  "resources/js/Pages/Whitelists/All.jsx": {
+    "file": "assets/All-CjfgKECt.js",
+    "name": "All",
+    "src": "resources/js/Pages/Whitelists/All.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-DOwyOX3F.js",
+      "_ApplicationLogo-D-kku-4I.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
+    ]
+  },
+  "resources/js/Pages/Whitelists/Create.jsx": {
+    "file": "assets/Create-BSDwbkEh.js",
+    "name": "Create",
+    "src": "resources/js/Pages/Whitelists/Create.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-CXG85_ua.js",
+      "_InputLabel-BUJULuQT.js",
+      "_AuthenticatedLayout-DOwyOX3F.js",
+      "_ApplicationLogo-D-kku-4I.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
+    ]
+  },
+  "resources/js/Pages/Whitelists/Edit.jsx": {
+    "file": "assets/Edit-7d5w9JJf.js",
+    "name": "Edit",
+    "src": "resources/js/Pages/Whitelists/Edit.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-DOwyOX3F.js",
+      "_ApplicationLogo-D-kku-4I.js",
+      "_transition-kWffz3ZB.js"
+    ],
+    "css": [
+      "assets/app-dF8q25zu.css"
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-BSC6wbLk.js",
+    "file": "assets/app-CLqLlnJR.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -222,14 +339,19 @@
       "resources/js/Pages/Auth/ResetPassword.jsx",
       "resources/js/Pages/Auth/VerifyEmail.jsx",
       "resources/js/Pages/Dashboard.jsx",
+      "resources/js/Pages/Error.jsx",
       "resources/js/Pages/Profile/Edit.jsx",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
-      "resources/js/Pages/Welcome.jsx"
+      "resources/js/Pages/Welcome.jsx",
+      "resources/js/Pages/Whitelists/AddUsers.jsx",
+      "resources/js/Pages/Whitelists/All.jsx",
+      "resources/js/Pages/Whitelists/Create.jsx",
+      "resources/js/Pages/Whitelists/Edit.jsx"
     ],
     "css": [
-      "assets/app-CGpqKXKT.css"
+      "assets/app-dF8q25zu.css"
     ]
   }
 }

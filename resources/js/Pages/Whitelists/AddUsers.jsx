@@ -50,14 +50,15 @@ export default function Create({ auth, whitelist, users }) {
                             )}
                             <div>
                                 <InputLabel
-                                    htmlFor="whitelist_file_path"
-                                    value="Whitelist File"
+                                    htmlFor="whitelist_upload"
+                                    value="Whitelist File (JSON only, not required)"
+                                    className="text-gray-800 dark:text-gray-200"
                                 />
                                 <TextInput
-                                    id="whitelist_file_path"
+                                    id="whitelist_upload"
                                     type="file"
                                     name="whitelist_upload"
-                                    className="mt-1 block w-full"
+                                    className="mt-1 block w-full dark:text-gray-200"
                                     onChange={(e) => {
                                         fileReader.readAsText(e.target.files[0]);
                                         fileReader.onload = function (event) {
@@ -71,7 +72,10 @@ export default function Create({ auth, whitelist, users }) {
                                 <InputError message={errors.whitelist_upload} className="mt-2"/>
                             </div>
                             <div className="mt-4">
-                                <InputLabel htmlFor="friendly_name" value="Friendly Name"/>
+                                <InputLabel
+                                    htmlFor="friendly_name"
+                                    className="text-gray-800 dark:text-gray-200"
+                                    value="Friendly Name"/>
 
                                 <TextInput
                                     id="friendly_name"
@@ -90,7 +94,10 @@ export default function Create({ auth, whitelist, users }) {
                             </div>
 
                             <div className="mt-4">
-                                <InputLabel htmlFor="users" value="Users (Comma Separated)"/>
+                                <InputLabel
+                                    htmlFor="users"
+                                    className="text-gray-800 dark:text-gray-200"
+                                    value="Users (Comma Separated)"/>
 
                                 <TextInput
                                     id="users"
@@ -109,7 +116,7 @@ export default function Create({ auth, whitelist, users }) {
                             </div>
                             <div className="mt-4 text-right">
                                 <Link
-                                    href={route("whitelists.index")}
+                                    href={route("whitelist.edit", whitelist.id)}
                                     className="bg-gray-100 py-1 px-3 text-gray-800 rounded shadow transition-all hover:bg-gray-200 mr-2"
                                 >
                                     Cancel

@@ -3,7 +3,6 @@ import InputLabel from "@/Components/InputLabel";
 import TextInput from "@/Components/TextInput";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
-import InputTag from "@/Components/InputTag.jsx";
 
 export default function Create({ auth }) {
     const { data, setData, post, errors, reset } = useForm({
@@ -46,7 +45,7 @@ export default function Create({ auth }) {
                                 <InputLabel
                                     htmlFor="whitelist_file_path"
                                     className="text-gray-800 dark:text-gray-200"
-                                    value="Whitelist File"
+                                    value="Whitelist File (JSON only, not required)"
                                 />
                                 <TextInput
                                     id="whitelist_file_path"

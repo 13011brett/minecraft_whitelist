@@ -11,13 +11,12 @@ class WhitelistService
 
         $response_json = $response->json();
         $updatedUserArray = [];
-        // most efficient way of doing this that I could come up with, without messing with the order of the array.
         foreach ($response_json as $user) {
 
             $user['id'] = $this->converIdToUuid($user['id']);
             $updatedUserArray[] = $user;
         }
-
+        //I believe ID's may work here, but I wanted to follow the format of examples given.
         return str_replace("\"id\"", "\"uuid\"",json_encode($updatedUserArray));
     }
 
