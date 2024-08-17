@@ -57,7 +57,7 @@ If you would like to try it out without going through the quick setup, go ahead 
 # Setup Info
 
 - Requirements: Docker Compose (Included in Windows & Mac's Docker Desktop, may need to be added separately via linux).
-    - [Windows](https://docs.docker.com/desktop/install/windows-install/)
+    - [Windows](https://docs.docker.com/desktop/install/windows-install/) -- I highly recommend using WSL for the integration, and running this within WSL (default dev environment).
     - [Mac](https://docs.docker.com/desktop/install/windows-install/)
     - [Linux](https://docs.docker.com/desktop/install/linux-install/)
  
