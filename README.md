@@ -35,9 +35,9 @@ by Brett Scarlett
 
 Welcome in! This project was made from a previous [challenge](https://github.com/13011brett/apex_challenge), given to me by Apex Hosting as seen in the lovely ASCII art above. It is composed of `Laravel` for the back-end & `React` for the front-end, utilizing Inertia as a bridge in some ways.
 
-The purpose of this project is quite simple in nature; a CRUD interface for users to store their whitelist(s), and users within them, while also giving ease of use adding said users for the video game Minecraft. This project utilizes the [Mojang API](https://wiki.vg/Mojang_API#Usernames_to_UUIDs) to create proper whitelists.
+The purpose of this project is quite simple in nature; a CRUD interface for users to store their whitelist(s), and users within them, while also giving ease of use adding said users for the video game Minecraft. This project utilizes the [Mojang API](https://wiki.vg/Mojang_API#Usernames_to_UUIDs) to create proper whitelists within the web interface, and stores them within a table on a database as well as a file in local storage. I would prefer this to be stored in cloud storage for a real world use case of course.
 
-I feel that this project could be expanded to easily create a server startup packager, getting plugins from other places and then wrapping it up for either self hosted or for game hosting servers.
+I feel that this project could be expanded to easily create a server startup packager, or even just a server browser viewer, getting plugins from other places and then wrapping it up for either self hosted or for game hosting servers.
 
 If you would like to try it out without going through the quick setup, go ahead and go to my [site](http://apex.scarletttech.com) (hosted over http since I didn't setup the cert as of writing this).
 
@@ -51,6 +51,7 @@ If you would like to try it out without going through the quick setup, go ahead 
 - [x] Incorporate Auth into the project for each route.
 - [ ] Add ability to search within Whitelists & Whitelist Users.
 - [x] Utilize Mojangs Bulk API to mass add users.
+- [x] Ability to quickly download `whitelist.json`, formatted properly for ease of use. 
 
 
 # Setup Info
