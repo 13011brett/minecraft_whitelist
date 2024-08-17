@@ -67,7 +67,7 @@ To get started, I have created a shell script that will install the containers a
 The script is in the root directory, `./start.sh`, go ahead and run that. First time run may take 5 - 10 minutes. `CTRL+C` will close the container if you're still attached, otherwise you can do `./vendor/bin/sail down` to shut down all active images.
 
 After that is complete, it should automatically be up and running at `http://localhost` as long as nothing else is bound to port 80.
-The `docker-compose.yml` is setup accordingly, and will also be running `npm run dev` by default to support hot reloads. Feel free to modify.
+The `docker-compose.yml` is setup accordingly, and will also be running `npm run build` by default. Feel free to run the `npm_run_dev.sh` script to support hot reloads. There is also a 20 second sleep by default, due to migrations needing to wait for sql to finish starting. Couldn't get docker to wait on that image to build fully.
 
 Migrations will automatically run by default, but will not seed. If you would like a fresh build with all migrations re-ran and seeded data, run `./migrate_and_seed.sh` while the container is actively running.
 
