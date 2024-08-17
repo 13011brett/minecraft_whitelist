@@ -27,7 +27,7 @@ export default function Create({ auth }) {
             user={auth.user}
             header={
                 <div className="flex justify-between items-center">
-                    <h2 className="font-semibold text-xl text-gray-800 dark:text-gray-600 leading-tight">
+                    <h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                         Create new Whitelist
                     </h2>
                 </div>
@@ -37,7 +37,7 @@ export default function Create({ auth }) {
 
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div className="bg-dark dark:bg-black overflow-hidden shadow-sm sm:rounded-lg">
+                    <div className="bg-dark dark:bg-black overflow-hidden shadow-sm sm:rounded-lg ">
                         <form
                             onSubmit={onSubmit}
                             className="p-4 sm:p-8 bg-white dark:bg-zinc-900 shadow sm:rounded-lg"
@@ -45,13 +45,14 @@ export default function Create({ auth }) {
                             <div>
                                 <InputLabel
                                     htmlFor="whitelist_file_path"
+                                    className="text-gray-800 dark:text-gray-200"
                                     value="Whitelist File"
                                 />
                                 <TextInput
                                     id="whitelist_file_path"
                                     type="file"
                                     name="whitelist_upload"
-                                    className="mt-1 block w-full"
+                                    className="mt-1 block w-full text-gray-800 dark:text-gray-200"
                                     onChange={(e) => {
                                         fileReader.readAsText(e.target.files[0]);
                                         fileReader.onload = function (event) {
@@ -64,15 +65,15 @@ export default function Create({ auth }) {
                                 />
                                 <InputError message={errors.whitelist_upload} className="mt-2"/>
                             </div>
-                            <div className="mt-4">
-                                <InputLabel htmlFor="friendly_name" value="Friendly Name"/>
+                            <div className="mt-4 ">
+                                <InputLabel className="text-gray-800 dark:text-gray-200" htmlFor="friendly_name" value="Friendly Name"/>
 
                                 <TextInput
                                     id="friendly_name"
                                     type="text"
                                     name="friendly_name"
                                     value={data.friendly_name}
-                                    className="mt-1 block w-full"
+                                    className="mt-1 block w-full "
                                     isFocused={true}
                                     placeholder="My Favorite Server!"
                                     onChange={(e) => setData("friendly_name", e.target.value)}
@@ -84,7 +85,7 @@ export default function Create({ auth }) {
                             </div>
 
                             <div className="mt-4">
-                                <InputLabel htmlFor="users" value="Users (Comma Separated)"/>
+                                <InputLabel className="text-gray-800 dark:text-gray-200" htmlFor="users" value="Users (Comma Separated)"/>
 
                                 <TextInput
                                     id="users"

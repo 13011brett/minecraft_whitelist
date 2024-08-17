@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
 
-    Route::get('/', [RegisteredUserController::class, 'create'])
+    Route::get('/', function () {
+        return redirect('/register');
+    });
+
+    Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);

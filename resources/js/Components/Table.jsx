@@ -1,6 +1,6 @@
 import {router} from "@inertiajs/react";
 
-export default function Table({ items, columns, primary, action, actionRemove }) {
+export default function Table({ items, columns, primary, action, actionRemove, actionDownload }) {
 
     const deleteWhitelist = (project) => {
         if (!window.confirm("Are you sure you want to delete the whitelist?")) {
@@ -32,7 +32,9 @@ export default function Table({ items, columns, primary, action, actionRemove })
                                 {item[column]}
                             </td>
                         )}
-                        <td className="px-3 py-2">
+                        <td className="px-3 py-2 space-x-8">
+                            <a href={route(actionDownload, item.id)}
+                               className="font-medium text-green-600 dark:text-green-600 hover:underline">Download</a>
                             <a href={route(action, item.id)}
                                className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             <button

@@ -28,19 +28,19 @@ export default function TableRemove({ items, columns, primary, action, actionPar
                         <th key={column} scope="col" className="px-6 py-3">{column}</th>
                     )}
                     <th scope="col" className="px-6 py-3">Actions</th>
-                    <th colSpan="1" className="px-6 py-3">
+                    <th colSpan="1" className="px-3 py-3 space-x-8">
                         <Link
                             href={route(actionEdit, actionParentId)}
                             className="bg-emerald-500 py-2 px-3 text-white rounded shadow transition-all hover:bg-emerald-600"
                         >
                             Add Users / Edit
                         </Link>
-                        <Link
+                        <a
                             href={route(actionDownload, actionParentId)}
-                            className="bg-indigo-50py-2 px-3 text-white rounded shadow transition-all hover:bg-indigo-600"
+                            className="bg-blue-400 py-2 px-3 text-white rounded shadow transition-all hover:bg-indigo-600"
                         >
                             Download Whitelist
-                        </Link>
+                        </a>
                     </th>
                 </tr>
                 </thead>
@@ -58,7 +58,7 @@ export default function TableRemove({ items, columns, primary, action, actionPar
                         )}
                         <td className="px-6 py-4">
                             <button type="submit" onClickCapture={e => setValuesForUser(item)}
-                                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                    className="font-medium text-red-500 hover:underline">
                                 Remove
                             </button>
                         </td>

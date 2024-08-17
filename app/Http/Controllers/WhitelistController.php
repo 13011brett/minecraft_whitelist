@@ -129,6 +129,11 @@ class WhitelistController extends Controller
 
     }
     public function download(Request $request, Whitelist $whitelist){
+
+        if(Auth::id() !== $request->user()->id){
+            abort(403);
+        }
+
         $fileName = $whitelist->id . '_whitelist.json';
         return Storage::download($fileName, 'whitelist.json');
     }
