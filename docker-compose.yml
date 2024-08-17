@@ -53,7 +53,7 @@ services:
             - mailpit
             - selenium
         # Below can be uncommented for auto migrations alongside auto NPM runs. Explicitly for Dev.
-        # command: bash -c "sleep 20 && npm install && php artisan migrate && php artisan serve --host 0.0.0.0 --port=80 & npm run dev"
+        command: bash -c "sleep 20 && npm install && php artisan migrate && php artisan serve --host 0.0.0.0 --port=80 & npm run dev"
     redis:
         image: 'redis:alpine'
         ports:
